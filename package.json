@@ -32,9 +32,7 @@
     "test": "jest --config ./internal/testing/jest-config.ts",
     "test:coverage": "jest --coverage --config ./internal/testing/jest-config.ts",
     "test:update-snapshot": "jest --updateSnapshot --config ./internal/testing/jest-config.ts",
-    "test:watch": "jest --watch --config ./internal/testing/jest-config.ts",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy:ci": "gatsby build --prefix-paths && gh-pages -d public -r https://$ACCESS_TOKEN@github.com/Kongbee/Kongbee.github.io.git"
+    "test:watch": "jest --watch --config ./internal/testing/jest-config.ts"
   },
   "commitlint": {
     "extends": [

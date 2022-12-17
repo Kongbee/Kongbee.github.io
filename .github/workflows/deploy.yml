@@ -1,33 +1,23 @@
-name: build gatsby
+name: CI
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Setup Node
-        uses: actions/setup-node@v1
+      - name: npm install
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: GitHub Pages
+        if: success()
         with:
-          node-version: '14.x'
-      - name: Cache node_modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{runner.OS}}-build-${{hashFiles('**/yarn.lock')}}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ runner.OS }}-
-      - name: Install dependencies
-        run: yarn install --prod --pure-lockfile
-      - name: Build
-        run: yarn build --prefix-paths
+          target_branch: master
+          build_dir: public
+        uses: crazy-max/ghaction-github-pages@v1.2.5
         env:
-          NODE_ENV: production
-      - uses: peaceiris/actions-gh-pages@v2
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./public
+          ACCESS_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
+          GITHUB_PAT: ${{ secrets.GH_PAT }}
