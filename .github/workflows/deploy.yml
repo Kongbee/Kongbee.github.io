@@ -15,9 +15,8 @@ jobs:
       - name: GitHub Pages
         if: success()
         with:
-          target_branch: master
+          target_branch: gh-pages
           build_dir: public
         uses: crazy-max/ghaction-github-pages@v1.2.5
         env:
           ACCESS_TOKEN: "${{ secrets.ACCESS_TOKEN }}"
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
