@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: GitHub Config
         run: |
-          git config --global user.email "rhdmsqls5@gmail.com"
-          git config --global user.name "rhdmsqls5"
+          git config --global user.email rhdmsqls5@gmail.com
+          git config --global user.name rhdmsqls5
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies
