@@ -1,6 +1,6 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
+  "title": "BeeLog",
+  "url": "https://Kongbee.github.io/",
   "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
   "copyright": "© All rights reserved.",
   "googleAnalyticsId": "UA-73379983-2",
@@ -22,9 +22,9 @@
     }
   ],
   "author": {
-    "name": "John Doe",
+    "name": "Kongbee",
     "photo": "/photo.jpg",
-    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "bio": "한글로 설명을 적어볼게용>?",
     "contacts": {
       "rss": "",
       "email": "",
