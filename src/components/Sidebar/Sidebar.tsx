@@ -6,6 +6,7 @@ import { Author } from "./Author";
 import { Contacts } from "./Contacts";
 import { Copyright } from "./Copyright";
 import { Menu } from "./Menu";
+import { Categories } from "./Categories";
 
 import * as styles from "./Sidebar.module.scss";
 
@@ -20,6 +21,7 @@ const Sidebar = ({ isIndex }: Props) => {
     <div className={styles.sidebar}>
       <div className={styles.inner}>
         <Author author={author} isIndex={isIndex} />
+        <Categories/>
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
         <Copyright copyright={copyright} />

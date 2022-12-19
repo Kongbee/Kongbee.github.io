@@ -1,10 +1,12 @@
 ---
 title: TEST Github Action 과연..?
 date: "2017-08-19T22:40:32.169Z"
+
 template: "post"
+slug: "/posts/Network"
 draft: false
-slug: "/posts/humane-typography-in-the-digital-age"
-category: "Typography"
+
+category: "Network"
 tags:
   - "Design"
   - "Typography"
