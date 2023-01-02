@@ -5,7 +5,6 @@ date: 2022-12-14 10:12:70
 category: "Design Pattern"
 description: "객체를 사용하는 코드에서 객체 생성 부분을 떼어내 추상화한 패턴"
 
-slug: "/posts/DesignPattern"
 template: "post"
 draft: false
 ---
